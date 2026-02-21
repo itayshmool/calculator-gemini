@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <span style="font-size: 2em; vertical-align: middle;">+</span>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="add()">=</button>
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function add() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 + num2;
+            if (!isNaN(result)) {
+                document.getElementById('result').innerText = result;
+            } else {
+                document.getElementById('result').innerText = 'Invalid input';
+            }
+        }
+    </script>
+</body>
+</html>
